@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>HTML Test</title>        
+    </head>
+    <style>
+        .tt { /*Title Text*/
+            color: rgb(255, 255, 255);
+            font-family: cursive;
+            text-align: center;
+            line-height: 0.8;
+        }
+        .Title-Container {
+            background-color: rgb(155, 169, 190);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Title-Container img {
+            width: 20%; /* Adjust size as needed */
+            height: auto; /* Adjust size as needed */
+            margin: 0 10px; /* Add spacing around the image */
+        }
+        .Picture-Grid {
+            display: flex; /* Enables flexbox */
+            flex-wrap: wrap;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Centers items vertically */
+            gap: 20px; /* Adds spacing between images */
+        }
+        .Picture-Grid img {
+            border-radius: 10px;
+            border: 3px solid;
+            border-color: aliceblue;
+        }
+        .msg {
+            color: aliceblue;
+            font-family: cursive;
+        }
+        body { 
+            background-color: rgb(47, 78, 110);
+            margin-top: 50px; /* Adjust the value as needed */
+            margin: 10
+        }
+    </style>
+    <body>
+        <div class="Title-Container">
+            <img src="StarL-removebg-preview.png" alt="Star Left" height="100px"> 
+            <h1 class="tt" style="font-size:7vw;">Good bye Arvin!</h1>
+            <img src="StarR-removebg-preview.png" alt="Star RIght">
+        </div>
+        <h3 class = "tt" style="font-size:3vw;">We'll miss you!</h3>
+        <div class="Picture-Grid">
+           <img src="image9.jpg"> 
+           <img src="image4.jpg">
+           <p class="msg">Good luck <br>in the future!</p> 
+           <img src="image13.jpg">
+           <img src="image8.jpg"> 
+           <img src="image5.jpg">
+           <p class="msg">Thank you Arvin<br> for being <br> such a great <br>commander!</p> 
+           <img src="image12.jpg">
+           <img src="image10.jpg"> 
+           <img src="image6.jpg"> 
+           <img src="image11.jpg">
+           <img src="image3.jpg"> 
+           <img src="image2.jpg"> 
+           <p class="msg">We appreciate you!</p>
+           <img src="image1.jpg">
+           <img src="image7.jpg"> 
+        </div>
+
+    </body>
+    <script>
+         function randomHeight() {
+            return Math.floor(Math.random() * (300 - 100 + 1)) + 200; // Random value between 100 and 300
+        }
+
+        window.onload = function () {
+            const images = document.querySelectorAll('.Picture-Grid img'); // Select all images in Picture-Grid
+            images.forEach(image => {
+                image.style.height = randomHeight() + 'px'; // Set random height for each image
+            });
+        };
+    </script>
+</html>
